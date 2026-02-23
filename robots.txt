@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://systemis-ia.vercel.app/sitemap.xml
+Sitemap: https://systemis.site/sitemap.xml

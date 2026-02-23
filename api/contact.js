@@ -8,14 +8,14 @@
  * IMPORTANT — Resend sender address:
  *   • Free plan / no verified domain → use "onboarding@resend.dev"
  *     (delivers only to the email registered in your Resend account for testing)
- *   • Production → verify your domain in Resend and change FROM_ADDRESS below
- *     to something like "contacto@systemis.ai"
+ *   • Production → verify systemis.site in Resend and change FROM_ADDRESS below
+ *     to something like "contacto@systemis.site"
  */
 
 const { Resend } = require('resend');
 
 const TO_ADDRESS   = 'systemis.ia@gmail.com';
-const FROM_ADDRESS = 'Systemis AI <onboarding@resend.dev>'; // ← update after domain verification
+const FROM_ADDRESS = 'Systemis AI <onboarding@resend.dev>'; // ← update to e.g. contacto@systemis.site after Resend domain verification
 
 module.exports = async function handler(req, res) {
   /* Only allow POST */
