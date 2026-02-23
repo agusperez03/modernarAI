@@ -105,32 +105,70 @@ document.addEventListener('DOMContentLoaded', function () {
     feedback.textContent = '';
   }
 
+  var submitBtn = form ? form.querySelector('[type="submit"]') : null;
+
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var locale = getCurrentLocale();
+      var locale      = getCurrentLocale();
       var modalLocale = (locale && locale.modal) ? locale.modal : {};
 
-      /* Check all required fields */
+      /* Client-side validation */
       var fields   = form.querySelectorAll('[required]');
       var allValid = true;
-      fields.forEach(function (f) {
-        if (!f.value.trim()) allValid = false;
-      });
+      fields.forEach(function (f) { if (!f.value.trim()) allValid = false; });
 
       if (!allValid) {
         showFeedback('error', modalLocale.errorMsg || 'Please fill in all required fields.');
         return;
       }
 
-      showFeedback('success', modalLocale.successMsg || 'Thank you! We will be in touch shortly.');
-      form.reset();
+      /* Loading state */
+      hideFeedback();
+      if (submitBtn) {
+        submitBtn.disabled    = true;
+        submitBtn.textContent = modalLocale.sendingMsg || 'Sending…';
+        submitBtn.style.opacity = '0.7';
+      }
+
+      /* POST to Vercel serverless function */
+      var payload = {
+        name:    form.querySelector('[name="name"]').value.trim(),
+        role:    form.querySelector('[name="role"]').value.trim(),
+        email:   form.querySelector('[name="email"]').value.trim(),
+        phone:   form.querySelector('[name="phone"]').value.trim(),
+        company: form.querySelector('[name="company"]').value.trim(),
+        message: form.querySelector('[name="message"]').value.trim(),
+      };
+
+      fetch('/api/contact', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      })
+        .then(function (res) { return res.json().then(function (data) { return { ok: res.ok, data: data }; }); })
+        .then(function (result) {
+          if (result.ok) {
+            showFeedback('success', modalLocale.successMsg || 'Thank you! We will be in touch shortly.');
+            form.reset();
+          } else {
+            showFeedback('error', modalLocale.serverError || 'Something went wrong. Please try again.');
+          }
+        })
+        .catch(function () {
+          showFeedback('error', modalLocale.serverError || 'Something went wrong. Please try again.');
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled      = false;
+            submitBtn.textContent   = modalLocale.submit || 'Send';
+            submitBtn.style.opacity = '';
+          }
+        });
     });
 
     /* Hide feedback whenever user starts editing a field again */
-    form.addEventListener('input', function () {
-      hideFeedback();
-    });
+    form.addEventListener('input', function () { hideFeedback(); });
   }
 
 });

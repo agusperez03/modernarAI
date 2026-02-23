@@ -101,7 +101,9 @@
       message:            'Message',
       messagePlaceholder: 'Questions, proposals or anything you would like us to know…',
       submit:             'Send',
+      sendingMsg:         'Sending…',
       errorMsg:           'Please fill in all required fields before sending.',
+      serverError:        'Something went wrong. Please try again later.',
       successMsg:         'Thank you! We will get back to you by email shortly.',
     },
   };

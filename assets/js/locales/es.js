@@ -101,7 +101,9 @@
       message:            'Mensaje',
       messagePlaceholder: 'Preguntas, propuestas o lo que quieras contarnos…',
       submit:             'Enviar',
+      sendingMsg:         'Enviando…',
       errorMsg:           'Por favor, completá todos los campos antes de enviar.',
+      serverError:        'Ocurrió un error. Por favor intentá de nuevo más tarde.',
       successMsg:         '¡Gracias! Nos estaremos comunicando por correo electrónico a la brevedad.',
     },
   };
