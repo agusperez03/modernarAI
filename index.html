@@ -180,7 +180,7 @@
 
     <!-- ── SECTION: Products / Solutions ─────────────────────────────── -->
     <section id="solutions" class="w-full max-w-6xl mb-32">
-      <div class="text-center mb-12">
+      <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4" data-i18n="products.title">
           Enterprise AI Solutions
         </h2>
@@ -189,88 +189,304 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="flex flex-col gap-8">
 
-        <!-- Atendi -->
-        <div class="flex flex-col p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group"
-          style="background:rgba(15,23,42,0.4); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-            style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:chat-round-line-linear" width="24" height="24" stroke-width="1.5" class="text-blue-500"></iconify-icon>
+        <!-- ATENDI -->
+        <div class="product-card p-8 md:p-10 rounded-3xl border border-white/5 hover:border-blue-500/30 transition-all duration-500 group relative overflow-hidden"
+          style="background:rgba(15,23,42,0.5); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.03), 0 8px 32px rgba(0,0,0,0.2);">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-blue-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6 text-xs font-medium border border-green-500/20 text-green-300"
+            style="background:rgba(34,197,94,0.08);">
+            <span class="flex h-1.5 w-1.5 rounded-full bg-green-400 animate-pulse"></span>
+            <span data-i18n="products.atendi.badge">Disponible ahora · Para empresas de servicios</span>
           </div>
-          <h3 class="text-xl font-medium tracking-tight text-white mb-2" data-i18n="products.atendi.name">Atendi</h3>
-          <p class="flex-grow text-sm font-light text-gray-400 mb-6" data-i18n="products.atendi.desc">
-            Enterprise intelligent assistant. Automates support, sales, bookings and FAQs with conversational agents via WhatsApp.
-          </p>
-          <ul class="text-xs font-light text-gray-500 space-y-2 mb-8">
-            <li class="flex items-center gap-2">
-              <iconify-icon icon="solar:check-circle-linear" class="text-cyan-400"></iconify-icon>
-              <span data-i18n="products.atendi.feature1">Ready for immediate deployment</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <iconify-icon icon="solar:check-circle-linear" class="text-cyan-400"></iconify-icon>
-              <span data-i18n="products.atendi.feature2">Reduced response times</span>
-            </li>
-          </ul>
-          <a href="#" class="text-sm font-normal text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-2 mt-auto">
-            <span data-i18n="products.atendi.cta">Discover Atendi</span>
-            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-          </a>
+
+          <!-- Title -->
+          <h3 class="text-2xl md:text-3xl font-medium tracking-tight text-white mb-5 relative z-10" data-i18n="products.atendi.headline">
+            Atendi — Tu agente de ventas y atención en WhatsApp, disponible 24/7
+          </h3>
+
+          <!-- Problem -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-blue-300 mb-2 uppercase tracking-wide" data-i18n="products.atendi.problemTitle">Problema que resuelve:</h4>
+            <p class="text-base font-light text-gray-300 leading-relaxed" data-i18n="products.atendi.problem">
+              Tus clientes escriben por WhatsApp fuera de horario, tus agentes no dan abasto, y cada consulta sin respuesta rápida es una venta perdida. Contratar más personal no escala.
+            </p>
+          </div>
+
+          <!-- What it does -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-blue-300 mb-3 uppercase tracking-wide" data-i18n="products.atendi.whatTitle">Qué hace exactamente:</h4>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-cyan-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.atendi.what1">Responde, califica y agenda por WhatsApp de forma autónoma, con el tono y conocimiento de tu negocio</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-cyan-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.atendi.what2">Escala al equipo humano solo cuando el lead está listo para cerrar</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-cyan-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.atendi.what3">Aprende de tu catálogo, precios, FAQs y procesos específicos</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- For whom -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-blue-300 mb-2 uppercase tracking-wide" data-i18n="products.atendi.forWhomTitle">Para quién es:</h4>
+            <p class="text-sm font-light text-gray-400 italic" data-i18n="products.atendi.forWhom">
+              Clínicas y centros de estética · Inmobiliarias · Concesionarias · Academias · E-commerce · Franquicias
+            </p>
+          </div>
+
+          <!-- Includes -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-blue-300 mb-3 uppercase tracking-wide" data-i18n="products.atendi.includesTitle">Incluye:</h4>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-blue-400" width="16"></iconify-icon>
+                <span data-i18n="products.atendi.include1">Agente entrenado con tu información</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-blue-400" width="16"></iconify-icon>
+                <span data-i18n="products.atendi.include2">Flujos de calificación personalizados</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-blue-400" width="16"></iconify-icon>
+                <span data-i18n="products.atendi.include3">Booking automático con integración de agenda</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-blue-400" width="16"></iconify-icon>
+                <span data-i18n="products.atendi.include4">Dashboard de conversaciones y métricas</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-blue-400" width="16"></iconify-icon>
+                <span data-i18n="products.atendi.include5">Onboarding en 2 semanas + soporte continuo</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Result -->
+          <div class="mb-7 p-4 rounded-xl border border-cyan-500/20 relative z-10"
+            style="background:rgba(6,182,212,0.05);">
+            <p class="text-sm font-medium text-cyan-200 italic" data-i18n="products.atendi.result">
+              "De 0 a respuesta calificada en menos de 2 minutos, sin intervención humana."
+            </p>
+          </div>
+
+          <!-- Pricing + CTA -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
+            <div>
+              <p class="text-xs font-light text-gray-500 mb-1" data-i18n="products.atendi.pricingLabel">Pricing referencial:</p>
+              <p class="text-sm font-medium text-white" data-i18n="products.atendi.pricing">Setup desde $800 USD · Suscripción mensual desde $350 USD</p>
+            </div>
+            <button
+              data-modal-open
+              data-product="atendi"
+              class="px-6 py-3 rounded-full text-sm font-medium text-white transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
+              style="background:linear-gradient(180deg,#3b82f6 0%,#1d4ed8 100%); box-shadow:0 0 0 1px rgba(37,99,235,0.5),0 4px 16px rgba(59,130,246,0.3);"
+              data-i18n="products.atendi.cta"
+            >Quiero ver Atendi en acción</button>
+          </div>
         </div>
 
-        <!-- Agili -->
-        <div class="flex flex-col p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group relative overflow-hidden"
-          style="background:rgba(15,23,42,0.4); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl"></div>
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-            style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:rocket-linear" width="24" height="24" stroke-width="1.5" class="text-blue-500"></iconify-icon>
+        <!-- CUALIX -->
+        <div class="product-card p-8 md:p-10 rounded-3xl border border-white/5 hover:border-blue-500/30 transition-all duration-500 group relative overflow-hidden"
+          style="background:rgba(15,23,42,0.5); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.03), 0 8px 32px rgba(0,0,0,0.2);">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6 text-xs font-medium border border-purple-500/20 text-purple-300"
+            style="background:rgba(168,85,247,0.08);">
+            <span class="flex h-1.5 w-1.5 rounded-full bg-purple-400 animate-pulse"></span>
+            <span data-i18n="products.cualix.badge">Nuevo · Para equipos comerciales B2B</span>
           </div>
-          <h3 class="text-xl font-medium tracking-tight text-white mb-2" data-i18n="products.agili.name">Agili</h3>
-          <p class="flex-grow text-sm font-light text-gray-400 mb-6" data-i18n="products.agili.desc">
-            Your AI Project Manager that lives inside your tools, connects your data and transforms ideas into tasks ready to execute.
-          </p>
-          <ul class="text-xs font-light text-gray-500 space-y-2 mb-8">
-            <li class="flex items-center gap-2">
-              <iconify-icon icon="solar:check-circle-linear" class="text-cyan-400"></iconify-icon>
-              <span data-i18n="products.agili.feature1">Scalable operational efficiency</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <iconify-icon icon="solar:check-circle-linear" class="text-cyan-400"></iconify-icon>
-              <span data-i18n="products.agili.feature2">Deep native integrations</span>
-            </li>
-          </ul>
-          <a href="#" class="text-sm font-normal text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-2 mt-auto">
-            <span data-i18n="products.agili.cta">Discover Agili</span>
-            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-          </a>
+
+          <!-- Title -->
+          <h3 class="text-2xl md:text-3xl font-medium tracking-tight text-white mb-5 relative z-10" data-i18n="products.cualix.headline">
+            Cualix — IA que califica tus leads antes de que lleguen a tus vendedores
+          </h3>
+
+          <!-- Problem -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-purple-300 mb-2 uppercase tracking-wide" data-i18n="products.cualix.problemTitle">Problema que resuelve:</h4>
+            <p class="text-base font-light text-gray-300 leading-relaxed" data-i18n="products.cualix.problem">
+              Tus vendedores pierden el 60% de su tiempo en leads que no van a comprar. La calificación manual es lenta, inconsistente y no escala cuando el volumen crece. El pipeline está lleno de oportunidades que no son oportunidades.
+            </p>
+          </div>
+
+          <!-- What it does -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-purple-300 mb-3 uppercase tracking-wide" data-i18n="products.cualix.whatTitle">Qué hace exactamente:</h4>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-purple-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.cualix.what1">Contacta al lead en los primeros 5 minutos de ingreso (el momento de mayor intención)</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-purple-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.cualix.what2">Ejecuta una conversación de calificación por email, WhatsApp o LinkedIn</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-purple-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.cualix.what3">Asigna un score, enriquece el perfil y entrega al vendedor solo los leads listos para cerrar</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:check-circle-bold" class="text-purple-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.cualix.what4">El vendedor llega a la primera llamada sabiendo necesidad, presupuesto y urgencia</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- For whom -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-purple-300 mb-2 uppercase tracking-wide" data-i18n="products.cualix.forWhomTitle">Para quién es:</h4>
+            <p class="text-sm font-light text-gray-400 italic" data-i18n="products.cualix.forWhom">
+              Empresas B2B con equipos de 3 a 30 vendedores · Tecnología · Servicios financieros · Consultoría · Educación corporativa · Logística · SaaS
+            </p>
+          </div>
+
+          <!-- Includes -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-purple-300 mb-3 uppercase tracking-wide" data-i18n="products.cualix.includesTitle">Incluye:</h4>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include1">Agente multicanal (email + WhatsApp + LinkedIn)</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include2">Motor de scoring configurable (BANT, MEDDIC)</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include3">Enriquecimiento automático de perfiles</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include4">Integración con HubSpot, Salesforce o Pipedrive</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include5">Handoff estructurado para vendedores</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include6">Nurturing automático para leads no calificados</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include7">Reportería de calidad de pipeline</span>
+              </li>
+              <li class="flex items-center gap-2 text-xs font-light text-gray-400">
+                <iconify-icon icon="solar:widget-2-linear" class="text-purple-400" width="16"></iconify-icon>
+                <span data-i18n="products.cualix.include8">Onboarding en 3 semanas + entrenamiento del equipo</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Result -->
+          <div class="mb-7 p-4 rounded-xl border border-purple-500/20 relative z-10"
+            style="background:rgba(168,85,247,0.05);">
+            <p class="text-sm font-medium text-purple-200 italic" data-i18n="products.cualix.result">
+              "Pipeline más limpio, ciclos de venta más cortos, vendedores enfocados en lo que importa."
+            </p>
+          </div>
+
+          <!-- Pricing + CTA -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
+            <div>
+              <p class="text-xs font-light text-gray-500 mb-1" data-i18n="products.cualix.pricingLabel">Pricing referencial:</p>
+              <p class="text-sm font-medium text-white" data-i18n="products.cualix.pricing">Setup desde $1.500 USD · Suscripción mensual desde $600 USD</p>
+            </div>
+            <button
+              data-modal-open
+              data-product="cualix"
+              class="px-6 py-3 rounded-full text-sm font-medium text-white transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
+              style="background:linear-gradient(180deg,#a855f7 0%,#7c3aed 100%); box-shadow:0 0 0 1px rgba(124,58,237,0.5),0 4px 16px rgba(168,85,247,0.3);"
+              data-i18n="products.cualix.cta"
+            >Quiero ver Cualix en acción</button>
+          </div>
         </div>
 
-        <!-- Custom -->
-        <div class="flex flex-col p-8 rounded-2xl border border-white/5 hover:border-blue-500/30 transition-colors group"
-          style="background:rgba(15,23,42,0.4); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.02);">
-          <div class="w-12 h-12 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-            style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:settings-linear" width="24" height="24" stroke-width="1.5" class="text-blue-500"></iconify-icon>
+        <!-- AI ARCHITECTURE -->
+        <div class="product-card p-8 md:p-10 rounded-3xl border border-white/5 hover:border-blue-500/30 transition-all duration-500 group relative overflow-hidden"
+          style="background:rgba(15,23,42,0.5); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.03), 0 8px 32px rgba(0,0,0,0.2);">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-orange-500/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full mb-6 text-xs font-medium border border-orange-500/20 text-orange-300"
+            style="background:rgba(249,115,22,0.08);">
+            <iconify-icon icon="solar:star-bold" class="text-orange-400" width="14"></iconify-icon>
+            <span data-i18n="products.aiarch.badge">Para operaciones complejas</span>
           </div>
-          <h3 class="text-xl font-medium tracking-tight text-white mb-2" data-i18n="products.custom.name">Custom</h3>
-          <p class="text-sm font-light text-gray-400 mb-6 flex-grow" data-i18n="products.custom.desc">
-            Tailored solutions. Consulting, design, training and deployment of exclusive models built for your use cases.
-          </p>
-          <ul class="text-xs font-light text-gray-500 space-y-2 mb-8">
-            <li class="flex items-center gap-2">
-              <iconify-icon icon="solar:check-circle-linear" class="text-cyan-400"></iconify-icon>
-              <span data-i18n="products.custom.feature1">Build your ideal product</span>
-            </li>
-            <li class="flex items-center gap-2">
-              <iconify-icon icon="solar:check-circle-linear" class="text-cyan-400"></iconify-icon>
-              <span data-i18n="products.custom.feature2">Predictive Machine Learning models</span>
-            </li>
-          </ul>
-          <a href="#" class="text-sm font-normal text-blue-400 hover:text-blue-300 transition-colors flex items-center gap-2 mt-auto">
-            <span data-i18n="products.custom.cta">Design a solution</span>
-            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
-          </a>
+
+          <!-- Title -->
+          <h3 class="text-2xl md:text-3xl font-medium tracking-tight text-white mb-5 relative z-10" data-i18n="products.aiarch.headline">
+            AI Architecture — Cuando tu operación necesita más que un producto estándar
+          </h3>
+
+          <!-- Description -->
+          <div class="mb-6 relative z-10">
+            <p class="text-base font-light text-gray-300 leading-relaxed" data-i18n="products.aiarch.desc">
+              Diseñamos e implementamos soluciones de IA a medida para empresas con procesos complejos, integraciones con sistemas propios o casos de uso que ningún producto estándar puede resolver.
+            </p>
+          </div>
+
+          <!-- Use cases -->
+          <div class="mb-6 relative z-10">
+            <h4 class="text-sm font-medium text-orange-300 mb-3 uppercase tracking-wide" data-i18n="products.aiarch.useCasesTitle">Casos de uso típicos:</h4>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:round-arrow-right-bold" class="text-orange-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.aiarch.useCase1">Modelos predictivos sobre datos históricos propios (churn, pricing, riesgo)</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:round-arrow-right-bold" class="text-orange-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.aiarch.useCase2">Automatización de procesos internos complejos</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:round-arrow-right-bold" class="text-orange-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.aiarch.useCase3">Integración con ERP, CRM legacy o sistemas propios</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:round-arrow-right-bold" class="text-orange-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.aiarch.useCase4">Análisis masivo de documentos o datos no estructurados</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm font-light text-gray-300">
+                <iconify-icon icon="solar:round-arrow-right-bold" class="text-orange-400 mt-0.5 flex-shrink-0" width="18"></iconify-icon>
+                <span data-i18n="products.aiarch.useCase5">Agentes de IA multi-proceso para operaciones con múltiples flujos</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Process -->
+          <div class="mb-6 relative z-10 p-4 rounded-xl border border-orange-500/10"
+            style="background:rgba(249,115,22,0.03);">
+            <p class="text-sm font-light text-gray-300">
+              <span class="font-medium text-orange-300" data-i18n="products.aiarch.processLabel">Proceso:</span>
+              <span data-i18n="products.aiarch.process"> Discovery → Arquitectura → Implementación → Mantenimiento</span>
+            </p>
+          </div>
+
+          <!-- Pricing + CTA -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 relative z-10">
+            <div>
+              <p class="text-xs font-light text-gray-500 mb-1" data-i18n="products.aiarch.pricingLabel">Precio de entrada:</p>
+              <p class="text-sm font-medium text-white" data-i18n="products.aiarch.pricing">Proyectos desde $8.000 USD + retainer mensual</p>
+            </div>
+            <button
+              data-modal-open
+              data-product="aiarch"
+              class="px-6 py-3 rounded-full text-sm font-medium text-white transition-all hover:opacity-90 active:scale-95 whitespace-nowrap"
+              style="background:linear-gradient(180deg,#f97316 0%,#ea580c 100%); box-shadow:0 0 0 1px rgba(234,88,12,0.5),0 4px 16px rgba(249,115,22,0.3);"
+              data-i18n="products.aiarch.cta"
+            >Contanos tu caso</button>
+          </div>
         </div>
 
       </div>
@@ -307,12 +523,12 @@
       </div>
     </section>
 
-    <!-- ── SECTION: How We Work / Methodology ────────────────────────── -->
+    <!-- ── SECTION: Methodology ────────────────────────── -->
     <section id="methodology" class="w-full max-w-6xl mb-24">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4" data-i18n="methodology.title">How We Work</h2>
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4" data-i18n="methodology.title">Metodología</h2>
         <p class="text-sm md:text-base font-light text-gray-400" data-i18n="methodology.subtitle">
-          A structured process to ensure the success and ROI of your technical implementation.
+          4 pasos específicos y orientados a resultados.
         </p>
       </div>
 
@@ -323,25 +539,25 @@
         <div class="flex flex-col relative z-10 p-6">
           <div class="w-12 h-12 rounded-full bg-slate-900 border border-blue-500/30 flex items-center justify-center mb-4 text-blue-400 font-medium shadow-[0_0_15px_rgba(59,130,246,0.2)]">1</div>
           <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step1.title">Discovery</h4>
-          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step1.desc">We analyse your workflows and identify key automation opportunities.</p>
+          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step1.desc">Analizamos tus flujos, volumen de leads/consultas y stack tecnológico actual</p>
         </div>
 
         <div class="flex flex-col relative z-10 p-6">
           <div class="w-12 h-12 rounded-full bg-slate-900 border border-blue-500/30 flex items-center justify-center mb-4 text-blue-400 font-medium shadow-[0_0_15px_rgba(59,130,246,0.2)]">2</div>
-          <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step2.title">Selection</h4>
-          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step2.desc">We choose the ideal product or design a fully custom AI architecture.</p>
+          <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step2.title">Configuración</h4>
+          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step2.desc">Entrenamos el agente con tu información y configuramos las integraciones</p>
         </div>
 
         <div class="flex flex-col relative z-10 p-6">
           <div class="w-12 h-12 rounded-full bg-slate-900 border border-blue-500/30 flex items-center justify-center mb-4 text-blue-400 font-medium shadow-[0_0_15px_rgba(59,130,246,0.2)]">3</div>
-          <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step3.title">Implementation</h4>
-          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step3.desc">Secure deployment, integration with your core systems and performance testing.</p>
+          <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step3.title">Implementación</h4>
+          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step3.desc">Deploy seguro, pruebas con casos reales y ajuste fino</p>
         </div>
 
         <div class="flex flex-col relative z-10 p-6">
           <div class="w-12 h-12 rounded-full bg-slate-900 border border-blue-500/30 flex items-center justify-center mb-4 text-blue-400 font-medium shadow-[0_0_15px_rgba(59,130,246,0.2)]">4</div>
-          <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step4.title">Evolution</h4>
-          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step4.desc">Continuous monitoring, model refinement and guaranteed scalability.</p>
+          <h4 class="text-base font-medium text-white mb-2" data-i18n="methodology.step4.title">Evolución</h4>
+          <p class="text-xs font-light text-gray-400" data-i18n="methodology.step4.desc">Monitoreo continuo, refinamiento del modelo y escala cuando lo necesites</p>
         </div>
       </div>
     </section>
@@ -350,7 +566,7 @@
     <div class="h-px opacity-40 w-full max-w-4xl mt-10 mb-10"
       style="background:linear-gradient(90deg,transparent,rgba(59,130,246,0.3),transparent)"></div>
 
-    <!-- ── SECTION: Why Choose Us ─────────────────────────────────────── -->
+    <!-- ── SECTION: Why systemisAI ─────────────────────────────────────── -->
     <section id="why-us" class="w-full max-w-6xl mb-20">
       <div class="text-center mb-12">
         <span
@@ -358,9 +574,9 @@
           style="background:rgba(59,130,246,0.07);"
           data-i18n="whyUs.eyebrow"
         >Benefits</span>
-        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4" data-i18n="whyUs.title">Why Choose Us</h2>
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4" data-i18n="whyUs.title">¿Por qué systemisAI?</h2>
         <p class="text-sm md:text-base font-light text-gray-400 max-w-2xl mx-auto" data-i18n="whyUs.subtitle">
-          What sets us apart and why leading companies trust systemisAI to transform their operations.
+          Afirmaciones concretas que nos diferencian en el mercado latinoamericano.
         </p>
       </div>
 
@@ -370,11 +586,11 @@
           style="background:rgba(15,23,42,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);">
           <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
             style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:translation-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
+            <iconify-icon icon="solar:map-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
           </div>
           <div>
-            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.bilingual.title">Fluent Bilingual Support</h4>
-            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.bilingual.desc">Technical support in English and Spanish — no communication barriers for your team or organisation.</p>
+            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.latam.title">Especialistas en LATAM, no traductores de herramientas globales</h4>
+            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.latam.desc">Nuestros agentes hablan, negocian y califican con el tono y el contexto del mercado local.</p>
           </div>
         </div>
 
@@ -382,11 +598,11 @@
           style="background:rgba(15,23,42,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);">
           <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
             style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:settings-minimalistic-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
+            <iconify-icon icon="solar:chart-2-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
           </div>
           <div>
-            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.tailored.title">100% Tailored to Your Workflow</h4>
-            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.tailored.desc">Every solution is designed around your processes, tools and specific business needs. No generic templates.</p>
+            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.roi.title">ROI desde el primer mes, no promesas de largo plazo</h4>
+            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.roi.desc">Cada implementación viene con métricas base y benchmark de resultados a 30 días.</p>
           </div>
         </div>
 
@@ -394,11 +610,11 @@
           style="background:rgba(15,23,42,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);">
           <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
             style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:target-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
+            <iconify-icon icon="solar:box-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
           </div>
           <div>
-            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.results.title">Results-Driven</h4>
-            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.results.desc">We measure success in real ROI: time savings, operational cost reduction and concrete metrics from month one.</p>
+            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.products.title">Productos, no proyectos eternos</h4>
+            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.products.desc">Atendi y Cualix se implementan en 2–3 semanas. No vendemos consultoría interminable.</p>
           </div>
         </div>
 
@@ -406,35 +622,11 @@
           style="background:rgba(15,23,42,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);">
           <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
             style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:bolt-circle-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
+            <iconify-icon icon="solar:headphones-round-sound-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
           </div>
           <div>
-            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.agile.title">Agile Implementation, Zero Friction</h4>
-            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.agile.desc">Short delivery cycles with quickly visible results. No endless projects, infinite documentation or empty promises.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-5 p-7 rounded-2xl border border-white/5 hover:border-blue-500/20 transition-all duration-300 group"
-          style="background:rgba(15,23,42,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);">
-          <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
-            style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:shield-check-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
-          </div>
-          <div>
-            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.team.title">Expert, Committed Team</h4>
-            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.team.desc">AI specialists, systems engineers and process designers who accompany every project stage — before and after go-live.</p>
-          </div>
-        </div>
-
-        <div class="flex gap-5 p-7 rounded-2xl border border-white/5 hover:border-blue-500/20 transition-all duration-300 group"
-          style="background:rgba(15,23,42,0.35); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);">
-          <div class="w-11 h-11 rounded-xl flex-shrink-0 flex items-center justify-center group-hover:scale-105 transition-transform duration-300"
-            style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
-            <iconify-icon icon="solar:infinity-linear" width="22" height="22" class="text-blue-400"></iconify-icon>
-          </div>
-          <div>
-            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.postlaunch.title">Continuous Post-Launch Support</h4>
-            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.postlaunch.desc">We don't stop at go-live. We monitor, optimise and grow your solution as your company evolves.</p>
+            <h4 class="text-base font-medium text-white mb-1.5" data-i18n="whyUs.support.title">Soporte real post-lanzamiento</h4>
+            <p class="text-sm font-light text-gray-400 leading-relaxed" data-i18n="whyUs.support.desc">Monitoreo activo, refinamiento de modelos y escalabilidad garantizada.</p>
           </div>
         </div>
 
@@ -445,23 +637,70 @@
     <div class="h-px opacity-30 w-full max-w-4xl mb-16"
       style="background:linear-gradient(90deg,transparent,rgba(59,130,246,0.3),transparent)"></div>
 
-    <!-- ── SECTION: Final CTA ─────────────────────────────────────────── -->
-    <section class="w-full max-w-4xl flex flex-col items-center text-center mt-12 p-10 rounded-3xl border border-white/5 relative overflow-hidden"
-      style="background:rgba(15,23,42,0.5); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);">
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-blue-500/5 blur-3xl z-0 pointer-events-none"></div>
+    <!-- ── SECTION: Final CTAs con dos rutas ─────────────────────────────────────────── -->
+    <section class="w-full max-w-6xl mb-12">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-medium tracking-tight text-white mb-4" data-i18n="cta.mainTitle">
+          ¿Listo para transformar tu operación?
+        </h2>
+        <p class="text-sm md:text-base font-light text-gray-400 max-w-2xl mx-auto" data-i18n="cta.mainSubtitle">
+          Elegí la opción que mejor se adapte a tu necesidad
+        </p>
+      </div>
 
-      <h2 class="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-4 relative z-10" data-i18n="cta.title">
-        Transform Your Organisation Today
-      </h2>
-      <p class="text-sm sm:text-base font-light text-gray-400 max-w-xl mb-8 relative z-10" data-i18n="cta.subtitle">
-        Schedule a strategic session and discover the real ROI of implementing artificial intelligence in your company processes.
-      </p>
-      <button
-        data-modal-open
-        class="relative z-10 text-sm font-normal text-white px-8 py-4 rounded-full flex items-center justify-center gap-2 transition-all hover:opacity-90 active:scale-95"
-        style="background:linear-gradient(180deg,#3b82f6 0%,#1d4ed8 100%); box-shadow:inset 0 1px 0 rgba(255,255,255,0.2),0 0 0 1px rgba(37,99,235,0.5),0 0 32px rgba(59,130,246,0.5);"
-        data-i18n="cta.button"
-      >Request a demo</button>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <!-- Ruta 1: Para productos (Atendi / Cualix) -->
+        <div class="flex flex-col p-8 rounded-3xl border border-blue-500/20 relative overflow-hidden"
+          style="background:rgba(15,23,42,0.6); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.03), 0 8px 32px rgba(0,0,0,0.2);">
+          <div class="absolute top-0 right-0 w-48 h-48 bg-blue-500/5 blur-3xl"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              style="background:rgba(59,130,246,0.1); border:1px solid rgba(59,130,246,0.2);">
+              <iconify-icon icon="solar:lightbulb-bolt-linear" width="24" height="24" class="text-blue-400"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-medium text-white mb-3" data-i18n="cta.route1.title">
+              Para productos (Atendi / Cualix)
+            </h3>
+            <p class="text-sm font-light text-gray-400 mb-6 leading-relaxed" data-i18n="cta.route1.question">
+              ¿Querés ver cómo funciona en tu industria?
+            </p>
+            <button
+              data-modal-open
+              data-cta-type="demo"
+              class="w-full px-6 py-3.5 rounded-full text-sm font-medium text-white transition-all hover:opacity-90 active:scale-95"
+              style="background:linear-gradient(180deg,#3b82f6 0%,#1d4ed8 100%); box-shadow:0 0 0 1px rgba(37,99,235,0.5),0 4px 16px rgba(59,130,246,0.3);"
+              data-i18n="cta.route1.button"
+            >Solicitar demo de 30 minutos</button>
+          </div>
+        </div>
+
+        <!-- Ruta 2: Para enterprise/custom -->
+        <div class="flex flex-col p-8 rounded-3xl border border-orange-500/20 relative overflow-hidden"
+          style="background:rgba(15,23,42,0.6); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); box-shadow:inset 0 1px 0 rgba(255,255,255,0.03), 0 8px 32px rgba(0,0,0,0.2);">
+          <div class="absolute top-0 right-0 w-48 h-48 bg-orange-500/5 blur-3xl"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+              style="background:rgba(249,115,22,0.1); border:1px solid rgba(249,115,22,0.2);">
+              <iconify-icon icon="solar:programming-linear" width="24" height="24" class="text-orange-400"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-medium text-white mb-3" data-i18n="cta.route2.title">
+              Para enterprise/custom
+            </h3>
+            <p class="text-sm font-light text-gray-400 mb-6 leading-relaxed" data-i18n="cta.route2.question">
+              ¿Tu caso es más complejo? Hablemos de arquitectura.
+            </p>
+            <button
+              data-modal-open
+              data-cta-type="strategic"
+              class="w-full px-6 py-3.5 rounded-full text-sm font-medium text-white transition-all hover:opacity-90 active:scale-95"
+              style="background:linear-gradient(180deg,#f97316 0%,#ea580c 100%); box-shadow:0 0 0 1px rgba(234,88,12,0.5),0 4px 16px rgba(249,115,22,0.3);"
+              data-i18n="cta.route2.button"
+            >Agendar sesión estratégica</button>
+          </div>
+        </div>
+
+      </div>
     </section>
 
   </main>
